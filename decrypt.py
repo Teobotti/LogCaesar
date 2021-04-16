@@ -12,7 +12,7 @@ def decrypt(key, encrypted):
     return bytes(content)  
 
 
-for key in range(1,1000): #provo 1000 chiavi
+for key in range(1,1000): #trying 1000 different keys
         result = decrypt(key, encrypted)
         flag = codecs.decode(result, errors='ignore')
         if "{FLG:" in flag: 
